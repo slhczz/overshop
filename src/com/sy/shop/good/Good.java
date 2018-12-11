@@ -103,7 +103,7 @@ public class Good {
 
     @Override
     public String toString() {
-        return "Good{" +
+        return "GoodList{" +
                 "id=" + id +
                 ", shop_id=" + shop_id +
                 ", cate_id=" + cate_id +

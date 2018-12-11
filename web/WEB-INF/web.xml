@@ -14,7 +14,7 @@
     <!--</filter-mapping>-->
     <servlet>
         <servlet-name>Good</servlet-name>
-        <servlet-class>com.sy.shop.control.servlet.good.Good</servlet-class>
+        <servlet-class>com.sy.shop.control.servlet.good.GoodList</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Good</servlet-name>

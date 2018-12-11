@@ -132,7 +132,14 @@
                         <%
                     }else{
                          %><a href="/syshop/good?next=<%=next-20%>" class="prev">上一页</a>
-                             <a href="/syshop/good?next=0">1</a>
+                    <%
+                    if((next/20) < 3){
+                        %> <a href="/syshop/good?next=0">1</a><%
+                    }else{
+                        %> <a href="/syshop/good?next=0">1</a><%
+                    }
+            %>
+
                 <%
                     }
                     %>

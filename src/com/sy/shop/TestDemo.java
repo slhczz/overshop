@@ -16,9 +16,9 @@ public class TestDemo {
         System.out.println(goods.size());
         System.out.println(goods.size()/20+1);
         System.out.println(20*46);
-//        ArrayList<ArrayList<Good>>  goods = gf.queryLimit(20, 20);
-//        for (ArrayList<Good> lis: goods) {
-//            for (Good ls:lis) {
+//        ArrayList<ArrayList<GoodList>>  goods = gf.queryLimit(20, 20);
+//        for (ArrayList<GoodList> lis: goods) {
+//            for (GoodList ls:lis) {
 //                System.out.println(ls.getId());
 //            }
 //            System.out.println("\t");

@@ -9,12 +9,13 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class Details extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Object id = request.getAttribute("good_id");
-        int good_id =  (int)id;
+        String id = request.getParameter("good_id");
+        int good_id =  Integer.parseInt(id);
         GoodIf gf = new GoodIf();
         Good good = null;
         try {
@@ -25,7 +26,9 @@ public class Details extends HttpServlet {
         if(good ==null){
             response.sendRedirect("/syshop/list.jsp");
         }else{
-            request.getRequestDispatcher("/deails.jsp").forward(request,response);
+            HttpSession session = request.getSession();
+            session.setAttribute("good",good);
+            request.getRequestDispatcher("/details.jsp").forward(request,response);
         }
     }
 
